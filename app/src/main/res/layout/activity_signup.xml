@@ -9,15 +9,14 @@
     android:orientation="vertical"
     android:padding="8dp"
     android:visibility="visible"
-    tools:context=".LoginActivity">
+    tools:context=".SignupActivity">
 
     <androidx.cardview.widget.CardView
         android:layout_width="220dp"
         android:layout_marginTop="80dp"
         android:layout_height="220dp"
         android:layout_marginBottom="50dp"
-        app:cardCornerRadius="50dp"
-        >
+        app:cardCornerRadius="50dp">
         <ImageView
             android:id="@+id/imageView5"
             android:layout_width="220dp"
@@ -25,7 +24,6 @@
             android:scaleType="centerCrop"
             android:foregroundGravity="top"
             android:src="@drawable/police" />
-
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
@@ -40,7 +38,7 @@
             android:layout_height="match_parent"
             android:gravity="center"
             android:orientation="vertical"
-            android:padding="10dp">
+            android:padding="15dp">
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/name"
@@ -51,72 +49,75 @@
                 app:boxBackgroundColor="#201B44D8">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/email_fil"
+                    android:id="@+id/name_fil"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/white"
                     android:textColor="@color/white"
-                    android:visibility="gone"
                     android:textColorHint="#616161"
                     tools:ignore="VisualLintTextFieldSize" />
-
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
+                android:layout_marginTop="5dp"
                 android:hint="@string/email"
-                android:visibility="gone"
                 android:textColorHint="@color/white"
                 app:boxBackgroundColor="#201B44D8"
                 tools:ignore="VisualLintBounds">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/emai"
+                    android:id="@+id/email_fil"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/white"
                     android:textColor="@color/white"
                     android:textColorHint="#616161"
                     tools:ignore="VisualLintTextFieldSize,DuplicateClickableBoundsCheck" />
-
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/password"
+                android:id="@+id/age"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
-                android:hint="@string/password"
-                android:visibility="gone"
+                android:layout_marginTop="5dp"
+                android:hint="@string/age"
                 android:textColorHint="@color/white"
                 app:boxBackgroundColor="#201B44D8"
                 tools:ignore="VisualLintBounds">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/password_fil"
+                    android:id="@+id/age_fil"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/white"
                     android:textColor="@color/white"
-                    android:textColorHint="@color/black"
-                    tools:ignore="TextContrastCheck,VisualLintTextFieldSize" />
-
+                    android:textColorHint="#616161"
+                    tools:ignore="VisualLintTextFieldSize,DuplicateClickableBoundsCheck" />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <Button
-                android:id="@+id/button"
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:layout_marginBottom="30dp"
-                android:backgroundTint="#AAD3FF"
-                android:hapticFeedbackEnabled="true"
-                android:text="Start"
-                android:textColor="#455A64"
-                tools:ignore="VisualLintButtonSize" />
+                android:hint="@string/password"
+                android:textColorHint="@color/white"
+                app:boxBackgroundColor="#201B44D8"
+                android:layout_marginTop="5dp"
+                tools:ignore="VisualLintBounds">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/password_fil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:textColor="@color/white"
+                android:textColorHint="@color/black"
+                tools:ignore="TextContrastCheck,VisualLintTextFieldSize" />
+        </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.button.MaterialButton
                 android:layout_width="wrap_content"
@@ -133,6 +134,7 @@
                 android:hapticFeedbackEnabled="true"
                 android:layout_gravity="center"
                 app:cornerRadius="8dp" />
+
 
         </LinearLayout>
 

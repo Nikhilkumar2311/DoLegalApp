@@ -20,4 +20,9 @@
     <string name="previous">Previous</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="vandan_nandwana">Vandan Nandwana</string>
+    <string name="leaderboard_image">leaderboard_image</string>
+    <string name="leaderboard">Leaderboard</string>
+    <string name="_200_pts">200 pts.</string>
+    <string name="textview">TextView</string>
 </resources>

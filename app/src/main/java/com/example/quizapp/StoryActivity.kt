@@ -1,9 +1,12 @@
 package com.example.quizapp
 
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.MediaController
 import android.widget.Toast
+import android.widget.VideoView
 import com.example.quizapp.databinding.ActivityStoryBinding
 import java.util.zip.Inflater
 
@@ -11,6 +14,7 @@ class StoryActivity : AppCompatActivity() {
     private var count = 0;
     private lateinit var list:ArrayList<StoryModel>
     private lateinit var binding: ActivityStoryBinding
+    private lateinit var mediaController: MediaController
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityStoryBinding.inflate(layoutInflater)
@@ -30,6 +34,18 @@ class StoryActivity : AppCompatActivity() {
         list.add(StoryModel("Fir police manager ko lekar waha se chali gai. Abhi ki mummy ne ek tailor ke yaha Raju ki maa ko nokri bhi dilwa di jiski wajah se unka guzara aache se hone lag gaya tha.\n \n                 THE END",R.drawable.job))
         binding.sImage.setImageResource(list[0].s_image)
         binding.sText.text = list[0].s_text
+        mediaController = MediaController(this)
+        //Making video Here
+        binding.videoView.setVideoPath("android.resource://" + packageName + "/" + R.raw.video1)
+        binding.videoView.start()
+        mediaController.setAnchorView(binding.videoView)
+        binding.videoView.setMediaController(mediaController)
+
+
+
+
+
+
         binding.sNext.setOnClickListener{
             count++;
             if(count<list.size){
@@ -51,6 +67,11 @@ class StoryActivity : AppCompatActivity() {
             else{
                 Toast.makeText(this,"This is first page",Toast.LENGTH_SHORT).show()
             }
+        }
+
+        binding.leaderboardLogo.setOnClickListener{
+            intent = Intent(this,LeaderboardActivity::class.java)
+            startActivity(intent)
         }
 
 

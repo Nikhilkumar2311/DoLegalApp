@@ -4,6 +4,7 @@
 
     <application
         android:allowBackup="true"
+        android:screenOrientation="portrait"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
@@ -14,30 +15,34 @@
         tools:targetApi="31">
         <activity
             android:name=".SignupActivity"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".LeaderboardActivity"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".QuizStartActivity"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".WinnerActivity"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".StoryActivity"
             android:exported="false" />
         <activity
-            android:name=".ScoreActivity"
-            android:exported="false" />
-        <activity
             android:name=".QuizActivity"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".LoginActivity"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
+            android:screenOrientation="portrait"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

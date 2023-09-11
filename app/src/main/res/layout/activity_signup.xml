@@ -119,32 +119,26 @@
                 tools:ignore="TextContrastCheck,VisualLintTextFieldSize" />
         </com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.button.MaterialButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/signup1"
-                android:paddingStart="8dp"
-                android:paddingEnd="8dp"
-                android:paddingTop="4dp"
-                android:paddingBottom="5dp"
-                android:textColor="#FFFFFF"
-                android:backgroundTint="#AAD3FF"
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="30dp"
+                android:backgroundTint="#AAD3FF"
                 android:hapticFeedbackEnabled="true"
-                android:layout_gravity="center"
-                app:cornerRadius="8dp" />
+                android:minHeight="48dp"
+                android:paddingStart="8dp"
+                android:paddingTop="4dp"
+                android:paddingEnd="8dp"
+                android:paddingBottom="5dp"
+                android:text="@string/signup1"
+                android:textColor="#9A000000"
+                tools:ignore="TouchTargetSizeCheck" />
 
 
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
-
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/applogo"/>
 
 </LinearLayout>

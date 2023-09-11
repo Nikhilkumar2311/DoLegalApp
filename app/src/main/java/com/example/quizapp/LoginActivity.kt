@@ -14,11 +14,13 @@ class LoginActivity : AppCompatActivity() {
         val binding=ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.button.setOnClickListener{
+        binding.login.setOnClickListener{
 //            Firebase.auth.createUserWithEmailAndPassword(binding.email.editText?.text.toString(),binding.password.editText?.text.toString())
 //                .addOnCompleteListener {
 //                    if(it.isSuccessful){
 //                        Toast.makeText(this,"Logon Successful",Toast.LENGTH_SHORT).show()
+                        binding.login.width = 0
+
                         intent = Intent(this,StoryActivity::class.java)
                         startActivity(intent)
                         finish()
@@ -28,7 +30,7 @@ class LoginActivity : AppCompatActivity() {
 //                    }
 //                }
         }
-        binding.button.setOnClickListener {
+        binding.signup.setOnClickListener {
             intent = Intent(this,SignupActivity::class.java)
             startActivity(intent)
             finish()

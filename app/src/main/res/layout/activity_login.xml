@@ -13,7 +13,7 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="220dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="40dp"
         android:layout_height="220dp"
         android:layout_marginBottom="50dp"
         app:cardCornerRadius="50dp"
@@ -56,7 +56,6 @@
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/white"
                     android:textColor="@color/white"
-                    android:visibility="gone"
                     android:textColorHint="#616161"
                     tools:ignore="VisualLintTextFieldSize" />
 
@@ -66,9 +65,8 @@
                 android:id="@+id/email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
+                android:layout_marginTop="16dp"
                 android:hint="@string/email"
-                android:visibility="gone"
                 android:textColorHint="@color/white"
                 app:boxBackgroundColor="#201B44D8"
                 tools:ignore="VisualLintBounds">
@@ -88,9 +86,8 @@
                 android:id="@+id/password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
+                android:layout_marginTop="16dp"
                 android:hint="@string/password"
-                android:visibility="gone"
                 android:textColorHint="@color/white"
                 app:boxBackgroundColor="#201B44D8"
                 tools:ignore="VisualLintBounds">
@@ -107,42 +104,34 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/login"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:layout_marginBottom="30dp"
+                android:layout_marginTop="16dp"
                 android:backgroundTint="#AAD3FF"
                 android:hapticFeedbackEnabled="true"
-                android:text="Start"
+                android:text="@string/login"
                 android:textColor="#455A64"
                 tools:ignore="VisualLintButtonSize" />
 
-            <com.google.android.material.button.MaterialButton
-                android:layout_width="wrap_content"
+            <Button
+                android:id="@+id/signup"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/signup1"
-                android:paddingStart="8dp"
-                android:paddingEnd="8dp"
-                android:paddingTop="4dp"
-                android:paddingBottom="5dp"
-                android:textColor="#FFFFFF"
-                android:backgroundTint="#AAD3FF"
+                android:layout_gravity="center"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="30dp"
+                android:background="@android:color/transparent"
                 android:hapticFeedbackEnabled="true"
-                android:layout_gravity="center"
-                app:cornerRadius="8dp" />
+                android:paddingStart="8dp"
+                android:paddingTop="4dp"
+                android:paddingEnd="8dp"
+                android:paddingBottom="5dp"
+                android:text="@string/signup1"
+                android:textColor="#8FC2F8" />
 
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
-
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/applogo"/>
 
 </LinearLayout>

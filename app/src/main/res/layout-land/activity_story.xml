@@ -10,9 +10,9 @@
 
     <TextView
         android:layout_width="wrap_content"
+        android:visibility="gone"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:fontFamily="@font/adamina"
         android:text="@string/vandan_nandwana"
         android:textColor="#ACB6F1"
         android:textSize="24sp"
@@ -27,6 +27,7 @@
         android:layout_width="32dp"
         android:layout_height="32dp"
         android:layout_marginTop="16dp"
+        android:visibility="gone"
         android:layout_marginEnd="16dp"
         android:src="@drawable/leaderboard_logo"
         android:contentDescription="@string/leaderboard_image"
@@ -36,8 +37,11 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_margin="10dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
         app:cardBackgroundColor="#95FFFFFF"
         app:cardCornerRadius="10dp"
         app:layout_constraintBottom_toTopOf="@+id/s_next"
@@ -45,39 +49,48 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/leaderboard_logo">
 
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_height="match_parent">
+
             <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:id="@+id/linearLayout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
                 android:gravity="center"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/scrollView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
                 <VideoView
                     android:id="@+id/video_view"
-                    android:layout_width="wrap_content"
-                    android:layout_height="220dp" />
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
 
             </LinearLayout>
 
 
-
-
             <ScrollView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:id="@+id/scrollView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="320dp"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    tools:ignore="TextSizeCheck">
 
                     <TextView
                         android:id="@+id/s_text"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:fontFamily="@font/adamina"
                         android:padding="5dp"
                         android:text="@string/suspendisse_ultrices_metus_ut_risus_congue_et_congue_turpis_ultricies_pellentesque_ut_sagittis_eros_ut_nibh_leo_hdu_kolg_jokeig_ldkgiro_lseito"
                         android:textColor="#37474F"
@@ -87,7 +100,7 @@
             </ScrollView>
 
 
-        </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>
 
@@ -95,6 +108,7 @@
         android:id="@+id/s_prev"
         android:layout_width="150dp"
         android:layout_height="50dp"
+        android:visibility="gone"
         android:layout_marginStart="20dp"
         android:layout_marginBottom="20dp"
         android:backgroundTint="#AAD3FF"
@@ -114,6 +128,7 @@
         android:layout_marginBottom="20dp"
         android:backgroundTint="#AAD3FF"
         android:paddingStart="16dp"
+        android:visibility="gone"
         android:paddingEnd="16dp"
         android:text="@string/next"
         android:textColor="#455A64"

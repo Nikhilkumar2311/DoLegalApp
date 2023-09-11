@@ -73,9 +73,6 @@ class StoryActivity : AppCompatActivity() {
 
 
 
-
-
-
         binding.sNext.setOnClickListener {
             count++
             if (count < list.size) {
@@ -105,4 +102,6 @@ class StoryActivity : AppCompatActivity() {
 
 
     }
+
+
 }

@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        Handler(Looper.getMainLooper()).postDelayed(1500){
+        Handler(Looper.getMainLooper()).postDelayed(1000){
             if(Firebase.auth.currentUser!=null) {
                 val intent =Intent(this,StoryActivity::class.java)
                 startActivity(intent)
